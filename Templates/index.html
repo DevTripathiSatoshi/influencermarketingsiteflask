@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}MediaZenith - Home{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+  <video class="hero-video" autoplay muted loop>
+    <source src="{{ url_for('static', filename='images/bgv1.mp4') }}" type="video/mp4" />
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">MediaZenith</h1>
+    <p class="hero-subtitle">
+      MediaZenith offers great sponsorship and media services to brands in
+      connection with creators, as well as provides comprehensive media
+      solutions.
+    </p>
+    <a href="contact" class="btn btn-secondary hero-btn">Sponsor Creators</a>
+    <a href="https://discord.gg/mediazenith" target="_blank" class="btn btn-secondary hero-btn">Join Discord</a>
+  </div>
+</section>
+
+
+<section class="service-section">
+  <h1>Media Services</h1>
+  <div class="service-item" data-aos="slide-right" data-aos-duration="1600">
+    <img src="{{ url_for('static', filename='images/moon.jpg') }}" alt="Service Image" />
+    <div class="glass-overlay"></div> <!-- Glass overlay layer -->
+    <div class="content">
+      <h2>Influencer Marketing</h2>
+      <p>
+        MediaZenith specializes in influencer campaigns to increase your brand's reach and engagement. We partner with popular figures across social platforms to connect your brand to ideal audiences through authentic compelling content.
+      </p>
+      <!-- <div class="read-more">
+        <a href="influencer-marketing">Read More</a>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="service-item" data-aos="slide-right" data-aos-duration="1600">
+    <img src="{{ url_for('static', filename='images/galaxy1.jpg') }}" alt="Service Image" />
+    <div class="glass-overlay"></div> <!-- Glass overlay layer -->
+    <div class="content">
+      <h2>Sponsorships</h2>
+      <p>
+        MediaZenith offers full sponsorship packages. These packages fit the unique requirements of businesses and groups aiming to raise their profile. We set up clever tie-ups between sponsors and events social media stars, or online content makers.
+      </p>
+      <!-- <div class="read-more"><a href="sponsor">Read More</a></div> -->
+    </div>
+  </div>
+
+
+  <div class="service-item" data-aos="slide-right" data-aos-duration="1600">
+    <img src="{{ url_for('static', filename='images/galaxy2.jpg') }}" alt="Service Image" />
+    <div class="glass-overlay"></div> <!-- Glass overlay layer -->
+    <div class="content">
+      <h2>Social Media Management</h2>
+      <p>
+        MediaZenith offers skilled social media management services to enhance your brand's presence and engagement online. Our team creates personalized plans suitable to achieve your business goals managing on various platforms such as Discord, Instagram, YouTube, and more.
+      </p>
+      <!-- <div class="read-more"><a href="smm">Read More</a></div> -->
+    </div>
+  </div>
+</section>
+{% endblock %}

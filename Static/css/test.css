@@ -1,0 +1,380 @@
+/* General Styles */
+body {
+        font-family: 'Poppins', sans-serif;
+            margin: 0;
+                padding: 0;
+                    background-color: #121212; /* Dark background for overall theme */
+                        color: #e0e0e0; /* Light text color for dark theme */
+}
+
+/* Header & Navigation Styles */
+.navbar {
+        display: flex;
+            justify-content: space-between;
+                align-items: center;
+                    background-color: #0f1013;
+                        padding: 1rem;
+}
+
+.navbar-brand {
+        color: #00e1ff;
+            font-size: 1.5rem;
+                text-decoration: none;
+}
+
+.navbar-menu {
+        display: flex;
+            gap: 20px;
+}
+
+.navbar-item {
+        color: #0496bba4;
+            text-decoration: none;
+                transition: color 0.3s ease;
+}
+
+.navbar-item:hover {
+        color: #00e1ff;
+}
+
+.hamburger {
+        display: none;
+            flex-direction: column;
+                gap: 5px;
+                    cursor: pointer;
+}
+
+.hamburger span {
+        width: 25px;
+            height: 3px;
+                background-color: #052f42a4;
+                    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+        opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Hero Section */
+.hero-section {
+        position: relative;
+            width: 100%;
+                height: 100vh;
+                    overflow: hidden;
+}
+
+.hero-video {
+        width: 100%;
+            height: 100%;
+                object-fit: cover;
+}
+
+.hero-overlay {
+        position: absolute;
+            top: 0;
+                left: 0;
+                    width: 100%;
+                        height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+        position: absolute;
+            top: 50%;
+                left: 50%;
+                    transform: translate(-50%, -50%);
+                        text-align: center;
+                            color: #00e1ff;
+}
+
+.hero-title {
+        font-size: 3rem;
+            font-weight: 600;
+}
+
+.hero-subtitle {
+        font-size: 1.2rem;
+            margin-top: 1rem;
+                font-weight: 400;
+}
+
+.hero-btn {
+        background-color: #008bfd;
+            color: #0f1013;
+                padding: 0.75rem 2rem;
+                    border-radius: 30px;
+                        text-decoration: none;
+                            margin: 0.5rem;
+                                transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+        background-color: #21c4d0;
+}
+
+/* Team Stats Section */
+.team-stats-section {
+        padding: 5rem 0;
+            text-align: center;
+                background-color: #1f1f1f; /* Dark background for the stats section */
+                    color: #e0e0e0; /* Light text color for dark theme */
+}
+
+.team-stats-container {
+        display: flex;
+            justify-content: space-around;
+                flex-wrap: wrap;
+                    gap: 2rem;
+}
+
+.team-stat-item {
+        max-width: 250px;
+            text-align: center;
+                background-color: #2a2a2a; /* Dark background for individual stat items */
+                    padding: 2rem;
+                        border-radius: 10px;
+                            transition: background-color 0.3s ease;
+}
+
+.team-stat-item img {
+        max-width: 100%;
+            height: auto;
+                margin-bottom: 1rem;
+}
+
+.stat-number {
+        font-size: 3rem;
+            font-weight: 600;
+                color: #00e1ff;
+}
+
+.team-stat-item p {
+        font-size: 1rem;
+            color: #00a7daa4;
+}
+
+.team-stat-item:hover {
+        background-color: #333333; /* Lighter dark background on hover */
+}
+
+/* Footer Styles */
+footer {
+        background: linear-gradient(90deg, #0f1013, #1c1e24);
+            color: #00aeff;
+                padding: 2rem 0;
+                    text-align: center;
+}
+
+.footer-content {
+        display: flex;
+            flex-wrap: wrap;
+                justify-content: space-between;
+                    margin-bottom: 1rem;
+}
+
+.footer-copyright {
+        flex: 1 0 100%;
+            margin-bottom: 1rem;
+}
+
+.footer-links {
+        flex: 1 0 100%;
+            margin-top: 1rem;
+}
+
+.footer-links a {
+        color: #00b7fffb;
+            text-decoration: none;
+                margin: 0 10px;
+                    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+        color: #e100ff;
+}
+
+.footer-copyright a {
+        display: inline-block;
+            color: #ffffffa4;
+                text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+        .team-stat-item {
+                    flex: 1 1 calc(25% - 20px);
+                            max-width: calc(25% - 20px);
+        }
+    }
+
+    @media (max-width: 1024px) {
+            .navbar-menu {
+                        display: none;
+            }
+
+                .navbar-menu.active {
+                            display: flex;
+                                    position: absolute;
+                                            top: 4.375pc;
+                                                    right: 0;
+                                                            background-color: rgba(0, 0, 0, 0.7);
+                                                                    padding: 1.25pc;
+                                                                            gap: 15px;
+                                                                                    width: 100%;
+                                                                                            box-sizing: border-box;
+                                                                                                    animation: fadeIn 0.5s ease-in-out;
+                }
+
+                    .navbar-item {
+                                text-align: center;
+                    }
+
+                        footer {
+                                    font-size: 1pc;
+                        }
+
+                            .team-stats-container {
+                                        display: block;
+                                                text-align: center;
+                            }
+
+                                .team-stat-item {
+                                            flex: 1 1 100%;
+                                                    max-width: 100%;
+                                }
+
+                                    .footer-links {
+                                                display: flex;
+                                                        justify-content: center;
+                                    }
+
+                                        .footer-links a {
+                                                    margin-left: 7.5pt;
+                                                            margin-right: 7.5pt;
+                                        }
+
+                                            .hero-title {
+                                                        font-size: 2.5rem;
+                                            }
+
+                                                .hero-subtitle {
+                                                            font-size: 1rem;
+                                                }
+
+                                                    .service-item img {
+                                                                max-width: 100%;
+                                                    }
+                                                }
+
+                                                @media (max-width: 576px) {
+                                                        .team-stat-item {
+                                                                    flex: 1 1 100%;
+                                                                            max-width: 100%;
+                                                        }
+
+                                                            .hero-title {
+                                                                        font-size: 2rem;
+                                                            }
+
+                                                                .hero-subtitle {
+                                                                            font-size: .875rem;
+                                                                }
+                                                            }
+
+                                                            @media (max-width: 480px) {
+                                                                    .brands-container {
+                                                                                grid-template-columns: repeat(2, 1fr);
+                                                                    }
+
+                                                                        .brand-item {
+                                                                                    margin-bottom: 1.25pc;
+                                                                        }
+                                                                    }
+
+                                                                    @media (max-width: 400px) {
+                                                                            .btn {
+                                                                                        margin-bottom: 11.25pt;
+                                                                            }
+                                                                        }
+
+                                                                        /* AOS Animations */
+                                                                        @keyframes fadeIn {
+                                                                                from {
+                                                                                            opacity: 0;
+                                                                                                    transform: translateY(-20px);
+                                                                                }
+                                                                                    to {
+                                                                                                opacity: 1;
+                                                                                                        transform: translateY(0);
+                                                                                    }
+                                                                                }
+
+
+                                                                                /* Service Se
+                                                                                    }
+                                                                                }
+                                                                        }
+                                                                            }
+                                                                    }
+                                                                        }
+                                                                    }
+                                                            }
+                                                                }
+                                                            }
+                                                        }
+                                                }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+        }
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

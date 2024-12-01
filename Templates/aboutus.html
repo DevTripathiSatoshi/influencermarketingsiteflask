@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}MediaZenith - About US {% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <video class="about-video" autoplay loop muted>
+        <source src="{{ url_for('static', filename='images/bgv2.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="about-overlay"></div>
+    <div class="about-content">
+        <h1 class="about-title">About Us</h1>
+        <div class="about-carousel">
+            <div class="about-paragraph active">
+                <p>
+                    We are a forward-thinking, results-driven team
+committed to revolutionizing the way brands engage with their audiences through influencer partnerships. With years of expertise in the industry, we specialize in crafting bespoke influencer campaigns that align with your brand's vision, values, and goals. Our approach is rooted in authenticity and strategy—ensuring every collaboration feels organic and resonates with the target audience while driving measurable results.
+                </p>
+            </div>
+            <div class="about-paragraph">
+                <p>
+                    We work with a diverse range of brands, from emerging startups to established global names, helping them expand their reach, boost brand awareness, and increase conversions through strategic influencer partnerships. Our process covers every aspect of influencer marketing, from identifying the perfect influencers to managing campaigns, negotiating contracts, tracking performance, and optimizing for success
+                </p>
+            </div>
+            <div class="about-paragraph">
+                <p>
+                    We take the time to truly understand your brand, audience, and objectives, allowing us to curate highly tailored strategies that deliver real value. Whether you're looking to launch a new product, grow your social presence, or drive direct sales, our agency is here to connect you with the right influencers and create meaningful, long-lasting partnerships that bring your brand’s story to life.
+                </p>
+            </div>
+            <div class="about-paragraph">
+                <p>
+                    For influencers, we’re equally committed to providing opportunities that align with your personal brand, offering a platform to grow your career and collaborate with exciting brands. Together, we believe in the power of storytelling, creativity, and collaboration to achieve long-term success. Join us on this exciting journey, and let's create impactful, unforgettable campaigns that move the needle.
+                </p>
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" id="prev-button">Previous</button>
+            <button class="carousel-button" id="next-button">Next</button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
