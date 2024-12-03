@@ -8,13 +8,10 @@ This is a prototype website for a influencer marketing website
 ---
 
 
-## **Test URL**  
-You can access the test version of the Reunite project at:  
-[**Test URL**]([http://your-test-url-here.com](https://satoshimacchihuda.pythonanywhere.com/))  
 
 
 ## **Screenshots**  
-Below are some screenshots of the Reunite project in action:
+Below are some screenshots of the project in action:
 
 ### **1. Homepage**  
 ![Homepage Screenshot](screenshots/homepage.png)  
