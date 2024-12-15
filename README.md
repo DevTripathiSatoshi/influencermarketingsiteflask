@@ -8,13 +8,10 @@ This is a prototype website for a influencer marketing website
 ---
 
 
-## **Test URL**  
-You can access the test version of the Reunite project at:  
-[**Test URL**]([http://your-test-url-here.com](https://satoshimacchihuda.pythonanywhere.com/))  
 
 
 ## **Screenshots**  
-Below are some screenshots of the Reunite project in action:
+Below are some screenshots of the project in action:
 
 ### **1. Homepage**  
 ![Homepage Screenshot](screenshots/homepage.png)  
@@ -34,7 +31,7 @@ Below are some screenshots of the Reunite project in action:
 ### Steps to Run Locally  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/DevTripathiSatoshi/influencermarketingsiteflask.git
+   git clone [https://github.com/DevTripathiSatoshi/influencermarketingsiteflask.git](https://github.com/DevTripathiSatoshi/influencermarketingsiteflask.git)
    cd influencermarketingsiteflask
    ```
 2. Install dependencies:  
