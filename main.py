@@ -12,6 +12,13 @@ db = client.website
 data = db.wmail
 req = db.botreq '''
 
+from flask import send_from_directory
+
+@app.route('/static/<path:filename>')
+def custom_static(filename):
+    return send_from_directory('static', filename, mimetype='audio/mpeg')
+
+
 @app.route('/',methods=('GET', 'POST'))
 def main():
   return render_template('index.html')
@@ -20,32 +27,6 @@ def main():
 def aboutus():
   return render_template('aboutus.html')
 
-'''@app.route('/handle_data',methods=('GET', 'POST'))
-def handle_data():
-  if request.method=='POST': 
-    name = request.form['name'] 
-    email = request.form['email']
-    subject = request.form['subject'] 
-    message = request.form['message'] 
-    data.insert_one({'name': name, 'email': email,'subject':subject,'message':message}) 
-    return render_template('index.html')
-  all_data = data.find()
-
-
-
-@app.route('/load_data',methods=('GET', 'POST'))
-def load_data():
-  if request.method=='POST': 
-    name = request.form['name'] 
-    email = request.form['email']
-    dcID = request.form['dcID'] 
-    token = request.form['token']
-    bstatus = request.form['bstatus']
-    comment = request.form['comment']
-    req.insert_one({'name': name, 'email': email,'discord ID':dcID,'token':token,'bstatus':bstatus}) 
-    return render_template('bot.html')
-
-''' 
 
 
 '''

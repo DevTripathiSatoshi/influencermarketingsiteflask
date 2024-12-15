@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}MediaZenith{% endblock %}</title>
+  <title>{% block title %}Elevance X{% endblock %}</title>
   <meta name="description" content="We are a forward-thinking, results-driven team
   committed to revolutionizing the way brands engage with their audiences through influencer partnerships. With years of expertise in the industry, we specialize in crafting bespoke influencer campaigns that align with your brand's vision, values, and goals. Our approach is rooted in authenticity and strategy—ensuring every collaboration feels organic and resonates with the target audience while driving measurable results." />
-  <meta name="keywords" content="MediaZenith, sponsorship, media services, brand connections, media solutions, creators, Influencer Marketing, Social Media Management" />
-  <meta name="author" content="MediaZenith" />
+  <meta name="keywords" content="Elevance X, sponsorship, media services, brand connections, media solutions, creators, Influencer Marketing, Social Media Management" />
+  <meta name="author" content="Elevance X" />
 
-  <meta property="og:title" content="MediaZenith" />
+  <meta property="og:title" content="Elevance X" />
   <meta property="og:description" content="We are a forward-thinking, results-driven team
 committed to revolutionizing the way brands engage with their audiences through influencer partnerships. With years of expertise in the industry, we specialize in crafting bespoke influencer campaigns that align with your brand's vision, values, and goals. Our approach is rooted in authenticity and strategy—ensuring every collaboration feels organic and resonates with the target audience while driving measurable results." />
-  <meta property="og:image" content="{{url_for('static', filename='images/SuperSaturn.jpg')}}" />
-  <meta property="og:url" content="https://mediazenith.xyz/" />
+  <meta property="og:image" content="{{url_for('static', filename='images/logo.jpg')}}" />
+  <meta property="og:url" content="https://elevencex.in/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="MediaZenith" />
+  <meta property="og:site_name" content="Elevance X" />
 
 
-  <link rel="canonical" href="https://mediazenith.xyz/" />
-  <link rel="icon" href="{{url_for('static', filename='images/SuperSaturn.jpg')}}" />
+  <link rel="canonical" href="https://elevencex.in/" />
+  <link rel="icon" href="{{url_for('static', filename='images/logo.jpg')}}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -36,8 +36,8 @@ committed to revolutionizing the way brands engage with their audiences through 
 
 <body>
   <nav class="navbar">
-    <a href="https://discord.gg/mediazenith" target="_blank" style="text-decoration: none;">
-      <div class="navbar-brand">MediaZenith</div>
+    <a href="https://discord.gg/elevencex" target="_blank" style="text-decoration: none;">
+      <div class="navbar-brand">Elevance X</div>
     </a>
     <div class="navbar-menu" id="navbarMenu">
       <a href="/" class="navbar-item">Home</a>
@@ -59,17 +59,17 @@ committed to revolutionizing the way brands engage with their audiences through 
   <button id="music-control" class="music-button">♫</button> <!-- Background Music --> 
     <audio id="background-music" loop> 
         <source src="{{ url_for('static', filename='images/bgm.mp3') }}" type="audio/mpeg"> 
+        
         Your browser does not support the audio element. 
     </audio>
   <footer>
     <div class="footer-content">
       <div class="footer-copyright">
-        &copy; 2024 MediaZenith. All rights reserved.
+        &copy; 2024 Elevance X. All rights reserved.
       </div>
       <div class="footer-links">
-        <a href="https://discord.gg/mediazenith" target="_blank">Discord</a>
-        <a href="https://google.com" target="_blank">Twitter</a>
-        <a href="https://google.com" target="_blank">Instagram</a>
+        <a href="https://discord.gg/elevencex" target="_blank">Discord</a>
+        <a href="https://youtube.com/@elevencex?si=6pJpXdNnJjEfdyle" target="_blank">Youtube</a>
       </div>
     </div>
   </footer>
@@ -111,6 +111,22 @@ committed to revolutionizing the way brands engage with their audiences through 
         // Initialize with the first paragraph visible
         showParagraph(currentIndex);
     });
+
+    // Music control
+document.addEventListener('DOMContentLoaded', function() {
+    const musicButton = document.getElementById('music-control');
+    const backgroundMusic = document.getElementById('background-music');
+
+    musicButton.addEventListener('click', () => {
+        if (backgroundMusic.paused) {
+            backgroundMusic.play();
+            musicButton.style.backgroundColor = '#007bff';
+        } else {
+            backgroundMusic.pause();
+            musicButton.style.backgroundColor = '#3d3d5c';
+        }
+    });
+});
 </script>
 
 </body>
